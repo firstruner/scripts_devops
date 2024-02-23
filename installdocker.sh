@@ -1,6 +1,6 @@
 echo "[[[   - INSTALLATION DES PACKAGES -   ]]]"
 sudo apt-get update
-sudo apt-get install -y apt-transport-https git
+sudo apt-get install -y apt-transport-https
 sudo apt-get install -y docker.io
 echo "[[[   - DEMARRAGE DU SERVICE -   ]]]"
 sudo systemctl start docker
