@@ -6,11 +6,19 @@ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update
 sudo apt-get install -y kubectl kubelet kubeadm
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo apt-get update
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
 echo
 echo "[[[   - ACTIVATION DE KUBELET -   ]]]"
 echo
 sudo systemctl enable kubelet
 echo
+echo "[[[   - ACTIVATION DE MINIKUBE -   ]]]"
+echo
+sudo systemctl enable kubelet
+echo
+minikube start
 echo "[[[   - INITIALISATION -   ]]]"
 echo
 sudo kubeadm init
