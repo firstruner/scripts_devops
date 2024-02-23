@@ -7,7 +7,6 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo apt-get update
 sudo apt-get install -y kubectl kubelet kubeadm
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-sudo apt-get update
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 echo
 echo "[[[   - ACTIVATION DE KUBELET -   ]]]"
