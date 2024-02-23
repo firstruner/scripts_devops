@@ -13,10 +13,6 @@ echo "[[[   - ACTIVATION DE KUBELET -   ]]]"
 echo
 sudo systemctl enable kubelet
 echo
-echo "[[[   - ACTIVATION DE MINIKUBE -   ]]]"
-echo
-sudo systemctl enable kubelet
-echo
 minikube start
 echo "[[[   - INITIALISATION -   ]]]"
 echo
@@ -35,6 +31,10 @@ echo
 echo "[[[   - DESACTIVATION DU SWAP -   ]]]"
 echo
 swapoff -a
+echo
+echo "[[[   - ACTIVATION DE MINIKUBE -   ]]]"
+echo
+sudo systemctl enable kubelet
 echo
 echo "[[[   - VERIFICATION -   ]]]"
 echo
