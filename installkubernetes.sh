@@ -11,7 +11,6 @@ echo "[[[   - ACTIVATION DE KUBELET -   ]]]"
 echo
 sudo systemctl enable kubelet
 echo
-minikube start
 echo "[[[   - INITIALISATION -   ]]]"
 echo
 sudo kubeadm init
@@ -34,6 +33,7 @@ echo "[[[   - INSTALLATION DE MINIKUBE -   ]]]"
 echo
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
+minikube start
 echo
 echo "[[[   - VERIFICATION -   ]]]"
 echo
