@@ -12,7 +12,7 @@ echo
 read -p "-->> Voulez-vous ajuster la taille de la partition [y/n] ? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy] ]]; then
-  sudo gparted
+  gparted
 else
   echo " (i) : Il vous est possible à tout moment de lancer l'outils avec la commande gparted"
 fi
