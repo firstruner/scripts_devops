@@ -13,7 +13,7 @@ echo
 echo "[[[   - PARAMETRAGE DU SERVICE -   ]]]"
 echo
 sudo setfacl --modify user:$USER:rw /var/run/docker.sock
-sudo usermod -aG docker $USER && newgrp docker
+usermod -aG docker $USER && newgrp docker
 echo
 echo "[[[   - VERIFICATION DU SERVICE DOCKER -   ]]]"
 echo
