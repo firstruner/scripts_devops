@@ -14,7 +14,7 @@ echo "[[[   - PARAMETRAGE DU SERVICE -   ]]]"
 echo
 sudo setfacl --modify user:$USER:rw /var/run/docker.sock
 echo
-echo "[[[   - STATUS DU SERVICE DOCKER -   ]]]"
+echo "[[[   - VERIFICATION DU SERVICE DOCKER -   ]]]"
 echo
 sudo systemctl status docker | egrep eunning;
 echo
