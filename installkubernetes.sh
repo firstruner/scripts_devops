@@ -39,3 +39,4 @@ echo "[[[   - VERIFICATION -   ]]]"
 echo
 kubectl version
 kubectl get pods
+kubectl get nodes
