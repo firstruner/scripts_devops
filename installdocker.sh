@@ -13,7 +13,6 @@ echo
 echo "[[[   - PARAMETRAGE DU SERVICE -   ]]]"
 echo
 sudo setfacl --modify user:$USER:rw /var/run/docker.sock
-usermod -aG docker $USER && newgrp docker
 echo
 echo "[[[   - VERIFICATION DU SERVICE DOCKER -   ]]]"
 echo
@@ -23,6 +22,10 @@ echo "[[[   - RECUPERATION D'IMAGES -   ]]]"
 echo
 docker pull hello-world
 docker pull httpd
+echo
+echo "[[[   - PARAMETRAGE UTILISATEUR -   ]]]"
+echo
+sudo usermod -aG docker $USER #&& newgrp docker && exit;
 echo
 read -p "-->> Voulez-vous installer Kubernetes maintenant [y/n] ? " -n 1 -r
 echo    # (optional) move to a new line
