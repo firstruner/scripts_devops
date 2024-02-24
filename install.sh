@@ -21,14 +21,6 @@ read -p "-->> Voulez-vous installer Docker maintenant [y/n] ? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy] ]]; then
   bash $HOME/scripts_devops/installdocker.sh
-  echo
-  read -p "-->> Voulez-vous installer Kubernetes maintenant [y/n] ? " -n 1 -r
-  echo    # (optional) move to a new line
-  if [[ $REPLY =~ ^[Yy] ]]; then
-    bash $HOME/scripts_devops/installkubernetes.sh
-  else
-    echo " (i) : L'installation peux se faire manuellement ou en lançant le script via : bash $HOME/scripts_devops/installkubernetes.sh"
-  fi
 else
   echo " (i) : L'installation peux se faire manuellement ou en lançant le script via : bash $HOME/scripts_devops/installdocker.sh"
 fi
