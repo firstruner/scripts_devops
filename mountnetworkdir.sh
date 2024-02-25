@@ -1,7 +1,8 @@
 echo
 echo "[[[   - Mise à jour du système -   ]]]"
 echo
-apt-get update & apt-get upgrade
+apt-get update
+apt-get upgrade
 echo
 echo "[[[   - Installation des outils -   ]]]"
 echo
