@@ -32,6 +32,7 @@ echo
 echo "[[[   - INSTALLATION DE MINIKUBE -   ]]]"
 echo
 sudo apt-get install -y libcanberra-gtk-module
+sudo setfacl --modify user:$USER:rw /usr/local/share
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube start
