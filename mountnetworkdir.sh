@@ -16,6 +16,7 @@ read -r upwd
 echo
 echo -n "Entrer le domaine : "
 read -r udomain
+clear
 echo
 echo "[[[   - Mise à jour du système -   ]]]"
 echo
@@ -30,5 +31,9 @@ echo "[[[   - Montage -   ]]]"
 echo
 mkdir $localpath
 mount -t cifs $sharedpath $localpath -o username=$uname,password=$upwd,domain=$udomain
+clear
+echo
+echo "[[[   - Contenu du dossier $localpath -   ]]]"
+echo
 cd $localpath
 ls
